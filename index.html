@@ -6,15 +6,20 @@
     <title>Happy Anniversary</title>
 
     <style>
-        body {
+        html, body {
+            height: 100%;
             margin: 0;
-            height: 100vh;
+        }
+
+        body {
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #ffe4ec, #fff7f9);
             overflow: hidden;
+            position: relative;
         }
 
         .card {
@@ -24,6 +29,7 @@
             border-radius: 20px;
             box-shadow: 0 10px 35px rgba(0,0,0,0.15);
             max-width: 500px;
+            width: 90%;
             animation: fadeIn 1.2s ease-in-out;
             position: relative;
             z-index: 2;
@@ -72,8 +78,9 @@
         .heart {
             position: absolute;
             color: rgba(255, 105, 135, 0.6);
-            animation: floatUp 6s infinite ease-in;
             font-size: 20px;
+            animation: floatUp 6s infinite ease-in;
+            pointer-events: none;
         }
 
         @keyframes floatUp {
@@ -102,7 +109,7 @@
     <div class="heart" style="left:80%; animation-delay:3s;">💖</div>
 
     <div class="card">
-        <h1>Happy Anniversary Zozo 💖</h1>
+        <h1>Happy Anniversary Zoey 💖</h1>
 
         <a class="spotify-link"
            href="https://open.spotify.com/track/0eFQWVz0qIxDOvhLpZ40P7?si=wpIwPnUyQm6Zo7pLS-09hw"
@@ -111,7 +118,7 @@
             <img src="Screenshot_20260626_140020_Spotify.jpg" alt="Anniversary Image">
         </a>
 
-        <p>Tap the Spotify image for a clue 🎧</p>
+        <p>Tap the image to play our song 🎧</p>
     </div>
 
 </body>
