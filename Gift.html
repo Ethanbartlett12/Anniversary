@@ -1,125 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Anniversary</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Last Step ❤️</title>
 
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
-        body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ffe4ec, #fff7f9);
-            overflow: hidden;
-            position: relative;
-        }
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe4ec, #fff7f9);
+    overflow: hidden;
+    position: relative;
+}
 
-        .card {
-            text-align: center;
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.15);
-            max-width: 500px;
-            width: 90%;
-            animation: fadeIn 1.2s ease-in-out;
-            position: relative;
-            z-index: 2;
-        }
+/* CARD */
+.card {
+    text-align: center;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+    max-width: 500px;
+    width: 90%;
+    animation: fadeIn 1.2s ease-in-out;
+    position: relative;
+    z-index: 2;
+}
 
-        h1 {
-            margin: 0 0 15px;
-            font-size: 2.2rem;
-            color: #e91e63;
-        }
+/* TITLE */
+h1 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+    color: #e91e63;
+}
 
-        .spotify-link {
-            display: inline-block;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 15px;
-        }
+/* TEXT */
+p {
+    color: #666;
+    line-height: 1.5;
+}
 
-        .spotify-link:hover {
-            transform: scale(1.03);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-        }
+/* SPOTIFY BUTTON */
+.spotify-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 22px;
+    background: #1DB954;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-        img {
-            width: 100%;
-            border-radius: 15px;
-            display: block;
-        }
+.spotify-btn:hover {
+    transform: scale(1.05);
+    background: #17a74a;
+}
 
-        p {
-            margin-top: 15px;
-            color: #666;
-        }
+/* CONTINUE BUTTON */
+.continue-btn {
+    margin-top: 25px;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.continue-disabled {
+    background: #ccc;
+    color: #888;
+    cursor: not-allowed;
+}
 
-        /* Floating hearts */
-        .heart {
-            position: absolute;
-            color: rgba(255, 105, 135, 0.6);
-            font-size: 20px;
-            animation: floatUp 6s infinite ease-in;
-            pointer-events: none;
-        }
+.continue-enabled {
+    background: #e91e63;
+    color: white;
+}
 
-        @keyframes floatUp {
-            0% {
-                transform: translateY(100vh) scale(0.8);
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-10vh) scale(1.2);
-                opacity: 0;
-            }
-        }
-    </style>
+.continue-enabled:hover {
+    background: #d81b60;
+    transform: scale(1.03);
+}
+
+/* HEARTS */
+.heart {
+    position: absolute;
+    color: rgba(255, 105, 135, 0.6);
+    font-size: 20px;
+    animation: floatUp 6s infinite ease-in;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(100vh) scale(0.8); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- Floating hearts -->
-    <div class="heart" style="left:10%;">❤️</div>
-    <div class="heart" style="left:25%; animation-delay:2s;">💖</div>
-    <div class="heart" style="left:40%; animation-delay:4s;">❤️</div>
-    <div class="heart" style="left:60%; animation-delay:1s;">💗</div>
-    <div class="heart" style="left:80%; animation-delay:3s;">💖</div>
+<!-- hearts -->
+<div class="heart" style="left:10%;">❤️</div>
+<div class="heart" style="left:25%; animation-delay:2s;">💖</div>
+<div class="heart" style="left:40%; animation-delay:4s;">💗</div>
+<div class="heart" style="left:60%; animation-delay:1s;">❤️</div>
+<div class="heart" style="left:80%; animation-delay:3s;">💖</div>
 
-    <div class="card">
-        <h1>Happy Anniversary Zoey 💖</h1>
+<div class="card">
 
-        <a class="spotify-link"
-           href="https://open.spotify.com/track/0eFQWVz0qIxDOvhLpZ40P7?si=wpIwPnUyQm6Zo7pLS-09hw"
-           target="_blank">
+<h1>💖 One Last Step 💖</h1>
 
-            <img src="Screenshot_20260626_140020_Spotify.jpg" alt="Anniversary Image">
-        </a>
+<p>
+Your gift is almost ready...<br><br>
+First, press play on our song 🎵<br>
+Then come back here when it's running ❤️
+</p>
 
-        <p>Tap the image to play our song 🎧</p>
-    </div>
+<!-- SPOTIFY LINK -->
+<a class="spotify-btn"
+   href="https://open.spotify.com/track/0eFQWVz0qIxDOvhLpZ40P7?si=wpIwPnUyQm6Zo7pLS-09hw"
+   target="_blank"
+   onclick="songStarted()">
+   ▶ Play Our Song
+</a>
+
+<br>
+
+<!-- CONTINUE BUTTON -->
+<button id="continueBtn"
+        class="continue-btn continue-disabled"
+        disabled
+        onclick="goNext()">
+    Once your song is playing, tap below ❤️
+</button>
+
+</div>
+
+<script>
+
+let unlocked = false;
+
+function songStarted(){
+    unlocked = true;
+
+    const btn = document.getElementById("continueBtn");
+    btn.disabled = false;
+    btn.classList.remove("continue-disabled");
+    btn.classList.add("continue-enabled");
+
+    btn.innerText = "💖 I'm ready, take me to my gift 💖";
+}
+
+function goNext(){
+    if(unlocked){
+        window.location.href = "Final.html";
+    }
+}
+
+</script>
 
 </body>
 </html>
