@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Zoey ❤️</title>
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe4ec, #fff7f9);
+}
+
+/* MAIN WRAPPER */
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* TEXT */
+h1 {
+    color: #e91e63;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* IMAGE STACK */
+.image {
+    width: 100%;
+    max-width: 700px;
+    margin: 25px auto;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+}
+
+/* when visible */
+.image.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* spacing feel */
+.spacer {
+    height: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<h1>💖 Happy Anniversary/Birthday Zoey 💖</h1>
+
+<p>
+I love you more than anything.<br><br>
+I'm setting off, but not without my muse. ;)
+</p>
+
+<!-- IMAGES -->
+<img class="image" src="Windermere-sunrise-6-scaled.webp" alt="Windermere Sunrise">
+
+<div class="spacer"></div>
+
+<img class="image" src="Screenshot_20260627_184248_Trainline.jpg" alt="Train Journey">
+
+<div class="spacer"></div>
+
+<img class="image" src="Screenshot_20260627_184155_Bookingcom.jpg" alt="Booking Moment">
+
+</div>
+
+<script>
+// reveal images one by one
+const images = document.querySelectorAll(".image");
+
+images.forEach((img, index) => {
+    setTimeout(() => {
+        img.classList.add("show");
+    }, 800 + (index * 900));
+});
+</script>
+
+</body>
+</html>
